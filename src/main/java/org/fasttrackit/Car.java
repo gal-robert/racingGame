@@ -1,14 +1,8 @@
 package org.fasttrackit;
 
-public class Car {
+//inheritance or "is-a" relationship
+public class Car extends Vehicle {
 
-    String name;
-    String color;
-    double mileage;
-    double maxSpeed;
-    double fuelLevel;
-    double traveledDistance;
-    boolean running;
     int doorCount;
 
 //  FIXme add constructor
