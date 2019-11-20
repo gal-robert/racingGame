@@ -6,8 +6,13 @@ public class App {
         // git gud
         System.out.println("Welcome to the Bestest Racing Game");
 
+        //create engine object
+        Engine carEngine = new Engine();
+        carEngine.manufacturer = "Renault";
+        carEngine.capacity = 2.2;
+
         // instance variables
-        Car carReference = new Car();
+        Car carReference = new Car(carEngine);
         carReference.name = "Dacia";
         carReference.color = "Ultra Blue";
         carReference.mileage = 15.5;
@@ -15,10 +20,6 @@ public class App {
         carReference.doorCount = 2;
         carReference.maxSpeed = 200;
         carReference.running = false;
-
-        Engine carEngine = new Engine();
-        carEngine.manufacturer = "Renault";
-        carEngine.capacity = 2.2;
 
         carReference.engine = carEngine;
 
@@ -42,7 +43,9 @@ public class App {
 //        System.out.println(carReference.traveledDistance);
 
         // second object
-        Car car2 = new Car();
+        Car car2 = new Car(new Engine());
+        car2.engine.manufacturer = "Bavaria Motor Werk";
+        car2.engine.capacity = 3.2;
         car2.name = "BMW";
         car2.mileage = 11.36;
 
