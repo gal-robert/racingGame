@@ -19,6 +19,15 @@ public class App {
         carReference.maxSpeed = 200;
         carReference.running = false;
 
+        Engine carEngine = new Engine();
+        carEngine.manufacturer = "Renault";
+        carEngine.capacity = 2.2;
+
+        carReference.engine = carEngine;
+
+        System.out.println("Engine details... \n   " + carReference.engine.manufacturer + "\n   " + carReference.engine.capacity);
+
+
         // concat
         System.out.println("First Car Name = " + carReference.name);
         System.out.println(carReference.color);

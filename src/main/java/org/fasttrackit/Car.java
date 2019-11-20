@@ -1,11 +1,8 @@
 package org.fasttrackit;
 
 //inheritance or "is-a" relationship
-public class Car extends Vehicle {
+public class Car extends AutoVehicle {
 
     int doorCount;
-
-//  FIXme add constructor
-
 
 }
