@@ -68,6 +68,11 @@ public class App {
         Car car3 = car2;
         car3.name = "Tigaie";
 
+//        System.out.println("\nModulo example:");
+//        System.out.println(4%2);
+//        System.out.println(4%3);
+//        System.out.println(4%2 == 0);
+
 //        System.out.println("car3 = " + car3.name);
 //        System.out.println("car2 = " + car2.name);
 
