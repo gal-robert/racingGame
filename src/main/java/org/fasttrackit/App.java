@@ -83,6 +83,21 @@ public class App {
 
 
         //        System.out.println(carReference.name);
+
+        System.out.println("Studying class variabels (static): ");
+//        Vehicle veh1 = new Vehicle();
+//        Vehicle veh2 = new Vehicle();
+//        // not recomended
+//        veh1.totalCount = 10;
+//        veh2.totalCount = 25;
+//
+//        Vehicle.totalCount = 30;
+//
+//        System.out.println("Total vehicle count from veh1: " + veh1.totalCount);
+//        System.out.println("Total vehicle count from veh2: " + veh2.totalCount);
+        System.out.println("Total vehicle count from Vehicle class: " + Vehicle.totalCount);
+
+
     }
 
 }

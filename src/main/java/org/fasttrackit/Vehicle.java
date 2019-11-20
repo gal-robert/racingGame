@@ -2,6 +2,10 @@ package org.fasttrackit;
 
 public class Vehicle {
 
+    //class variable
+    static int totalCount;
+
+    //instance variable
     String name;
     String color;
     double mileage;
@@ -10,7 +14,11 @@ public class Vehicle {
     double traveledDistance;
     boolean running;
 
-    public double accelerate(double speed,double durationInHours) {
+    public Vehicle() {
+        totalCount++;
+    }
+
+    public double accelerate(double speed, double durationInHours) {
         System.out.println(this.name + " is accelerating with " + speed + "km/h for " + durationInHours + "h");
 
         // local variable (declared inside of method) is not assigned default value;
