@@ -8,4 +8,9 @@ public class Car extends AutoVehicle {
     public Car(Engine engine) {
         super(engine);
     }
+
+    //constructor overloading (added multiple constructors with different parameters)
+    public Car() {
+        this(new Engine());
+    }
 }

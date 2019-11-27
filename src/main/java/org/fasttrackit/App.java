@@ -6,6 +6,8 @@ public class App {
         Game main = new Game();
         main.start();
 
+        Car carWithDefaultEngine = new Car();
+
         // git gud
         System.out.println("Welcome to the Bestest Racing Game");
 
@@ -28,7 +30,7 @@ public class App {
         System.out.println("Engine details... \n   " + carReference.engine.manufacturer + "\n   " + carReference.engine.capacity);
 
         double accelerationDistance = carReference.accelerate(200, 1);
-        carReference.accelerate(120, 1);
+        carReference.accelerate(120);
         System.out.println("Acceleration distance: "+accelerationDistance);
 
         Mechanic worstMechanicEver = new Mechanic();
