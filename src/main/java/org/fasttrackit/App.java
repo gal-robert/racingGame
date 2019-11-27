@@ -16,13 +16,12 @@ public class App {
 
         // instance variables
         Car carReference = new Car(carEngine);
-        carReference.name = "Dacia";
-        carReference.color = "Ultra Blue";
-        carReference.mileage = 15.5;
-        carReference.fuelLevel = 105.0;
-        carReference.doorCount = 2;
-        carReference.maxSpeed = 200;
-        carReference.running = false;
+        carReference.setName("Dacia");
+        carReference.setColor("blue");
+        carReference.setMileage(5);
+        carReference.setFuelLevel(100);
+        carReference.setMaxSpeed(255);
+        carReference.setRunning(false);
 
         carReference.engine = carEngine;
 
@@ -31,40 +30,21 @@ public class App {
         double accelerationDistance = carReference.accelerate(200, 1);
         carReference.accelerate(120, 1);
         System.out.println("Acceleration distance: "+accelerationDistance);
+
         Mechanic worstMechanicEver = new Mechanic();
         worstMechanicEver.repairVehicle(carReference);
-        System.out.println("Total traveled distance after repair: " + carReference.traveledDistance + "\n");
+        System.out.println("Total traveled distance after repair: " + carReference.getTraveledDistance() + "\n");
 
 
         // concat
-        System.out.println("First Car Name = " + carReference.name);
+        System.out.println("First Car Name = " + carReference.getName());
 
         // second object
         Car car2 = new Car(new Engine());
         car2.engine.manufacturer = "Bavaria Motor Werk";
         car2.engine.capacity = 3.2;
-        car2.name = "BMW";
-        car2.mileage = 11.36;
+        car2.setName("BMW");
 
-        System.out.println("\nSecond Car Name = " + car2.name);
-
-        //overwrite variable in scope
-
-        car2.name = "Yugo";
-        System.out.println(car2.name);
-
-        // dupllicate object
-
-        Car car3 = car2;
-        car3.name = "Tigaie";
-
-//        // NullPointerException example
-//        Car car4 = null;
-//        System.out.println(car4.name);
-
-
-
-        System.out.println("Studying class variabels (static): ");
         System.out.println("Total vehicle count from Vehicle class: " + Vehicle.totalCount);
 
 
