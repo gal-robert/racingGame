@@ -16,7 +16,7 @@ public class App {
         carReference.name = "Dacia";
         carReference.color = "Ultra Blue";
         carReference.mileage = 15.5;
-        carReference.fuelLevel = 45.0;
+        carReference.fuelLevel = 105.0;
         carReference.doorCount = 2;
         carReference.maxSpeed = 200;
         carReference.running = false;
@@ -25,7 +25,8 @@ public class App {
 
         System.out.println("Engine details... \n   " + carReference.engine.manufacturer + "\n   " + carReference.engine.capacity);
 
-        double accelerationDistance = carReference.accelerate(60, 1);
+        double accelerationDistance = carReference.accelerate(200, 1);
+        carReference.accelerate(120, 1);
         System.out.println("Acceleration distance: "+accelerationDistance);
         Mechanic worstMechanicEver = new Mechanic();
         worstMechanicEver.repairVehicle(carReference);
@@ -34,13 +35,6 @@ public class App {
 
         // concat
         System.out.println("First Car Name = " + carReference.name);
-//        System.out.println(carReference.color);
-//        System.out.println(carReference.mileage);
-//        System.out.println(carReference.fuelLevel);
-//        System.out.println(carReference.doorCount);
-//        System.out.println(carReference.maxSpeed);
-//        System.out.println(carReference.running);
-//        System.out.println(carReference.traveledDistance);
 
         // second object
         Car car2 = new Car(new Engine());
@@ -50,13 +44,6 @@ public class App {
         car2.mileage = 11.36;
 
         System.out.println("\nSecond Car Name = " + car2.name);
-//        System.out.println(car2.color);
-//        System.out.println(car2.mileage);
-//        System.out.println(car2.fuelLevel);
-//        System.out.println(car2.doorCount);
-//        System.out.println(car2.maxSpeed);
-//        System.out.println(car2.running);
-//        System.out.println(car2.traveledDistance);
 
         //overwrite variable in scope
 
@@ -68,33 +55,13 @@ public class App {
         Car car3 = car2;
         car3.name = "Tigaie";
 
-//        System.out.println("\nModulo example:");
-//        System.out.println(4%2);
-//        System.out.println(4%3);
-//        System.out.println(4%2 == 0);
-
-//        System.out.println("car3 = " + car3.name);
-//        System.out.println("car2 = " + car2.name);
-
-//
 //        // NullPointerException example
 //        Car car4 = null;
 //        System.out.println(car4.name);
 
 
-        //        System.out.println(carReference.name);
 
         System.out.println("Studying class variabels (static): ");
-//        Vehicle veh1 = new Vehicle();
-//        Vehicle veh2 = new Vehicle();
-//        // not recomended
-//        veh1.totalCount = 10;
-//        veh2.totalCount = 25;
-//
-//        Vehicle.totalCount = 30;
-//
-//        System.out.println("Total vehicle count from veh1: " + veh1.totalCount);
-//        System.out.println("Total vehicle count from veh2: " + veh2.totalCount);
         System.out.println("Total vehicle count from Vehicle class: " + Vehicle.totalCount);
 
 
