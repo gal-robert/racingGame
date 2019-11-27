@@ -3,6 +3,9 @@ package org.fasttrackit;
 public class App {
     public static void main(String[] args) {
 
+        Game main = new Game();
+        main.start();
+
         // git gud
         System.out.println("Welcome to the Bestest Racing Game");
 
