@@ -1,6 +1,6 @@
 package org.fasttrackit;
 
-public class CheaterVehicle extends Vehicle {
+public class JokerVehicle extends Vehicle {
 
     @Override
     public double accelerate(double speed, double durationInHours) {
@@ -14,11 +14,15 @@ public class CheaterVehicle extends Vehicle {
         return distance;
     }
 
-
     //co-variant return type
     //access cannot be more restrictive than parent method
     @Override
-    public CheaterVehicle clone() {
-        return new CheaterVehicle();
+    public JokerVehicle clone() {
+        return new JokerVehicle();
     }
+
+    public void fly() {
+        System.out.println("mf cheater is flying...");
+    }
+
 }

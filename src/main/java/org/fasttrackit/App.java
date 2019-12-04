@@ -6,9 +6,15 @@ public class App {
         Game game = new Game();
         game.start();
 
-        CheaterVehicle joker = new CheaterVehicle();
+        //method implementation taken from object's class not from the variables class
+        //sub-classes can get super class as type
+        Vehicle joker = new JokerVehicle();
         joker.setName("Joker");
         joker.setFuelLevel(80);
+
+        //type casting
+        //variable's class determines what methods can be invoked
+        ((JokerVehicle) joker).fly();
 
         joker.accelerate(60, 1);
         System.out.println("Joker's total distance: " + joker.getTraveledDistance());
