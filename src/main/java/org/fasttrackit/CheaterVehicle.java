@@ -13,4 +13,12 @@ public class CheaterVehicle extends Vehicle {
         System.out.println("Cheater lmao");
         return distance;
     }
+
+
+    //co-variant return type
+    //access cannot be more restrictive than parent method
+    @Override
+    public CheaterVehicle clone() {
+        return new CheaterVehicle();
+    }
 }

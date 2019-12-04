@@ -70,6 +70,12 @@ public class Vehicle {
         return distance;
     }
 
+    // co-variant return type
+    @Override
+    public Vehicle clone() {
+        return new Vehicle();
+    }
+
 
 
     public String getName() {
