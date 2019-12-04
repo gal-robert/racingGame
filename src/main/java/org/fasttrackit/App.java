@@ -3,8 +3,15 @@ package org.fasttrackit;
 public class App {
     public static void main(String[] args) {
 
-        Game main = new Game();
-        main.start();
+        Game game = new Game();
+        game.start();
+
+        CheaterVehicle joker = new CheaterVehicle();
+        joker.setName("Joker");
+        joker.setFuelLevel(80);
+
+        joker.accelerate(60, 1);
+        System.out.println("Joker's total distance: " + joker.getTraveledDistance());
 
         Car carWithDefaultEngine = new Car();
 
@@ -24,6 +31,7 @@ public class App {
         carReference.setFuelLevel(100);
         carReference.setMaxSpeed(255);
         carReference.setRunning(false);
+        System.out.println(carReference.toString());
 
         carReference.engine = carEngine;
 
