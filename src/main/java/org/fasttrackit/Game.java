@@ -51,15 +51,18 @@ public class Game {
         try {
             return tracks[trackInput.nextInt() - 1];
         } catch (InputMismatchException e) {
-//            throw new RuntimeException("You have entered an invalid value");
             System.out.println("Let's try again...");
             getSelectedTrackFromUser();
             return null;
+//            throw new RuntimeException("You have entered an invalid value");
+
         } catch (ArrayIndexOutOfBoundsException e) {
-//            System.out.println("there are only " + tracks.length + " tracks available");
-//            getSelectedTrackFromUser();
-//            return null;
-            throw new Exception("You have selected a non-existing track");
+            System.out.println("There are only " + tracks.length + " tracks available");
+            getSelectedTrackFromUser();
+            return null;
+//            throw new Exception("You have selected a non-existing track");
+        } finally {
+            System.out.println("Always executed");
         }
     }
 
