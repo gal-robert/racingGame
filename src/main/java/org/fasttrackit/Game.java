@@ -38,10 +38,16 @@ public class Game {
     }
 
     private double getAccelerationSpeedFromUser() {
-        System.out.println("Please enter acceleration speed: ");
-        Scanner accelerationInput = new Scanner(System.in);
+        try {
+            System.out.println("Please enter acceleration speed: ");
+            Scanner accelerationInput = new Scanner(System.in);
 
-        return accelerationInput.nextDouble();
+            return accelerationInput.nextDouble();
+        } catch (InputMismatchException e) {
+            System.out.println("You have entered an invalid value. Please try again...");
+            //recursion
+            return getAccelerationSpeedFromUser();
+        }
     }
 
     private Track getSelectedTrackFromUser() throws Exception {
@@ -51,16 +57,9 @@ public class Game {
         try {
             return tracks[trackInput.nextInt() - 1];
         } catch (InputMismatchException e) {
-            System.out.println("Let's try again...");
-            getSelectedTrackFromUser();
-            return null;
-//            throw new RuntimeException("You have entered an invalid value");
-
+            throw new RuntimeException("You have entered an invalid value");
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("There are only " + tracks.length + " tracks available");
-            getSelectedTrackFromUser();
-            return null;
-//            throw new Exception("You have selected a non-existing track");
+            throw new Exception("You have selected a non-existing track");
         } finally {
             System.out.println("Always executed");
         }
